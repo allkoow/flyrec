@@ -1,0 +1,142 @@
+$header-height: 50px;
+$header-padding: 25px;
+
+header
+{
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: $header-height;
+	display: block;
+	z-index: 15;
+	font-size: 1em;
+	opacity: 0.95;
+	transition: background-color 0.2s;
+	background-color: $color-grey;
+	
+	#header-container
+	{
+		position: relative;
+		width: 100%;
+		max-width: $max-width;
+		margin: 0 auto;
+
+		#logo
+		{
+			display: inline-block;
+			position: absolute;
+			left: $header-padding;
+			line-height: $header-height;
+			font-size: 1.5em;
+
+			i
+			{
+				position: relative;
+				top: -3px;
+				font-size: 0.5em;
+				color: red;
+				animation: logo-ball 0.9s linear infinite;
+			}
+		}
+
+		nav
+		{
+			display: none;
+		}
+
+		#nav-mini-symbol
+		{
+			position: absolute;
+			height: 20px;
+			right: $header-padding;
+			top: 15px;
+			z-index: 15;
+
+			&:hover
+			{
+				cursor: pointer;
+
+				*
+				{
+					background-color: $color-sea;
+				}
+			}
+
+			div
+			{
+				display: block;
+				position: relative;
+				width: 35px;
+				height: 4px;
+				background-color: $color-dark;
+				transition: 0.2s ease;
+
+				&:nth-child(2)
+				{
+					top: 5px;
+				}
+
+				&:nth-child(3)
+				{
+					top: 10px;
+				}
+			}
+		}
+	}
+}
+
+#nav-mini
+{
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 50px;
+	width: 100%;
+	text-align: center;
+	z-index: 10;
+
+	li
+	{
+		height: 40px;
+		box-sizing: border-box;
+		background-color: $color-grey;
+		border-bottom: 1px solid $color-grey2;
+		color: $color-dark;
+		opacity: 0.85;
+		transition: 0.2s ease;
+
+		&:hover
+		{
+			background-color: $color-sea;
+			border-bottom: 1px solid $color-sea2;
+			color: #fff;
+		}
+
+		a
+		{
+			display: block;
+			line-height: 40px;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.header-scroll
+{
+	background-color: $color-grey;
+}
+
+
+
+.link-current
+{
+	color: $color-sea !important;
+}
+
+.link-mini-current
+{
+	background-color: $color-sea !important;
+	border-bottom: 1px solid $color-sea2 !important;
+	color: $color-grey !important;
+}

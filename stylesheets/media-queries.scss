@@ -1,0 +1,99 @@
+@media (min-width: 520px)
+{
+	body
+	{
+		font-size: 16px;
+	}
+}
+
+@media (min-width: 650px)
+{
+	#content2
+	{
+		#links
+		{
+			width: 400px !important;
+		}
+	}
+}
+
+@media (min-width: 720px)
+{
+	
+}
+
+@media (min-width: 1000px)
+{
+	header
+	{
+		background-color: transparent;
+
+		#header-container
+		{
+			#logo
+			{
+				display: none;
+			}
+
+		}
+
+		nav
+		{
+			display: inline-block !important;
+			position: absolute;
+			right: 50px;
+
+			li
+			{
+				display: inline;
+				padding-left: 10px;
+				padding-right: 10px;
+				text-align: center;
+				transition: 0.2s ease;
+
+				a
+				{
+					line-height: $header-height;
+					box-sizing: border-box;
+					text-transform: uppercase;
+
+					&:hover
+					{
+						color: $color-sea;
+					}
+				}
+			}
+		}
+
+		#nav-mini-symbol
+		{
+			display: none !important;
+		}
+
+
+	}
+
+	#nav-mini
+	{
+		display: none !important;
+	}
+
+	#content2
+	{
+		#links
+		{
+			width: 600px !important;
+
+			.youtube-link
+			{
+				width: 130px !important;
+				height: 130px !important;
+
+				.play
+				{
+					line-height: 130px !important;
+				}
+			}
+		}
+	}
+}
